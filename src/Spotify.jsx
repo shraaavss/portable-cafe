@@ -1,5 +1,5 @@
 import React from 'react'
-import './Spotify.css'
+import './General.css'
 
 export default function Spotify() {
     return (

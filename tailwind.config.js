@@ -9,7 +9,12 @@ export default {
       fontFamily: {
         'title': 'Leckerli One, cursive',
         'body': 'Ubuntu Mono, monospace',
-      }
+      },
+      colors: {
+        'regal-blue': '#243c5a',
+        'back-creame': '#DFD7BF',
+        'title-brown': '#1A120B',
+      },
     },
   },
   plugins: [],

@@ -2,10 +2,12 @@ import React from 'react';
 import Spotify from './Spotify';
 import cup from './/assets/coffeeeee.png';
 import './General.css'
+import AmbientSoundPlayer from './AudioPlayer';
 
 export default function Homepage() {
     return (
-        <div className="mainwrap w-screen h-screen flex flex-row flex-wrap justify-around justify-items-center content-center items-center p-8">
+        <div className="mainwrap w-screen h-screen flex flex-row flex-wrap 
+        justify-around justify-items-center content-center items-center p-8">
 
             <div className="block1 basis-1/3">
                 <h1 className="text-6xl font-title text-title-brown mb-2">Your Cafe</h1>
@@ -18,18 +20,10 @@ export default function Homepage() {
             </div>
 
             <div className="block3 basis-1/3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ducimus repudiandae vel, numquam est corporis doloremque 
-                beatae modi accusamus enim culpa necessitatibus mollitia laboriosam fugiat laudantium, natus temporibus ipsa iusto. Lorem 
-                ipsum dolor sit, amet consectetur adipisicing elit. Nobis dicta repudiandae consequuntur ab vel molestiae! Debitis culpa 
-                odio voluptatum fugit est in nemo quas voluptate. Dolore et animi cumque placeat?
+                <AmbientSoundPlayer soundPath="./assets/rain-sound.mp3" label="Rain Sound" />
             </div>
 
 
         </div>
     )
 }
-// background-color: #DFD7BF;
-// opacity: 1;
-// background-image:  radial-gradient(#3C2A21 0.65px, transparent 0.65px), radial-gradient(#3C2A21 0.65px, #DFD7BF 0.65px);
-// background-size: 26px 26px;
-// background-position: 0 0,13px 13px;

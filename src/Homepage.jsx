@@ -8,8 +8,8 @@ export default function Homepage() {
         <div className="mainwrap w-screen h-screen flex flex-row flex-wrap justify-around justify-items-center content-center items-center p-8">
 
             <div className="block1 basis-1/3">
-                <h1 className="text-6xl font-title text-title-brown mb-1">Your Cafe</h1>
-                <h3 className="subtitle text-2xl font-body text-title-brown">Hi there, how may I help you?</h3>
+                <h1 className="text-6xl font-title text-title-brown mb-2">Your Cafe</h1>
+                <h3 className="subtitle text-xl font-body text-title-brown">Hi there, how may I help you?</h3>
                 <Spotify />
             </div>
 

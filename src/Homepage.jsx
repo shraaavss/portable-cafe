@@ -1,8 +1,9 @@
 import React from 'react';
 import Spotify from './Spotify';
 import cup from './/assets/coffeeeee.png';
-import './General.css'
+import './General.css';
 import AmbientSoundPlayer from './AudioPlayer';
+import song from "./assets/rain-sound.mp3";
 
 export default function Homepage() {
     return (
@@ -20,7 +21,7 @@ export default function Homepage() {
             </div>
 
             <div className="block3 basis-1/3">
-                <AmbientSoundPlayer soundPath="./assets/rain-sound.mp3" label="Rain Sound" />
+                <AmbientSoundPlayer soundPath={song} label="Rain Sound" />
             </div>
 
 

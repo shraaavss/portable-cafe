@@ -3,7 +3,12 @@ import Spotify from './Spotify';
 import cup from './/assets/coffeeeee.png';
 import './General.css';
 import AmbientSoundPlayer from './AudioPlayer';
-import song from "./assets/rain-sound.mp3";
+import rain from "./assets/rain-sound.mp3";
+import beanPour from './assets/coffee-bean-pour-into-pan.mp3';
+import dripCof from './assets/drip-coffee-maker.mp3';
+import people from './assets/people-talking2.mp3'
+import pouring from './assets/pouring-coffee.mp3'
+
 
 export default function Homepage() {
     return (
@@ -21,7 +26,11 @@ export default function Homepage() {
             </div>
 
             <div className="block3 basis-1/3">
-                <AmbientSoundPlayer soundPath={song} label="Rain Sound" />
+                <AmbientSoundPlayer soundPath={rain}/>
+                <AmbientSoundPlayer soundPath={beanPour}/>
+                <AmbientSoundPlayer soundPath={dripCof}/>
+                <AmbientSoundPlayer soundPath={people}/>
+                <AmbientSoundPlayer soundPath={pouring}/>
             </div>
 
 

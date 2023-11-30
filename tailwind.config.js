@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         'title': 'Leckerli One, cursive',
         'body': 'Ubuntu Mono, monospace',
+        'sub-body': 'Courier Prime, monospace',
       },
       colors: {
         'regal-blue': '#243c5a',

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Spotify from './Spotify';
-import cup from './/assets/coffeeeee.png';
 import './General.css';
 import { Header } from './Header';
 
@@ -13,11 +12,6 @@ import pouring from './assets/pouring-coffee.mp3';
 import cofpour from './assets/cofeepour.png';
 
 export default function Homepage() {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handlePauseAll = () => {
-    setIsPlaying(false);
-  };
 
   return (
     <div className="flex flex-col h-screen">
@@ -34,24 +28,19 @@ export default function Homepage() {
           </div>
 
           <div className="block2 flex-1 text-center">
-            <img src={cofpour} alt="" className="mx-auto max-w-full h-auto" />
+            <img src={cofpour} alt="Girl pouring coffee" className="mx-auto max-w-full h-auto" />
           </div>
 
-          <div className="block3 flex-1">
-            {isPlaying && (
-              <button onClick={handlePauseAll} className="mb-4">
-                Pause All Sounds
-              </button>
-            )}
-            <AmbientSoundPlayer soundPath={rain} label="Rainy Day" setIsPlaying={setIsPlaying} />
+          <div className="block3 flex flex-col p-3">
+            <AmbientSoundPlayer soundPath={rain} label="Rainy Day" />
             <br />
-            <AmbientSoundPlayer soundPath={beanPour} label="Bean Pour" setIsPlaying={setIsPlaying} />
+            <AmbientSoundPlayer soundPath={beanPour} label="Bean Pour" />
             <br />
-            <AmbientSoundPlayer soundPath={dripCof} label="Drip Coffee" setIsPlaying={setIsPlaying} />
+            <AmbientSoundPlayer soundPath={dripCof} label="Drip Coffee" />
             <br />
-            <AmbientSoundPlayer soundPath={people} label="People Talking" setIsPlaying={setIsPlaying} />
+            <AmbientSoundPlayer soundPath={people} label="People Talking" />
             <br />
-            <AmbientSoundPlayer soundPath={pouring} label="Pouring" setIsPlaying={setIsPlaying} />
+            <AmbientSoundPlayer soundPath={pouring} label="Pouring" />
             <br />
             <br />
           </div>

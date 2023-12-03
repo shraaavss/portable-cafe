@@ -1,10 +1,10 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
-// import 'reactjs-popup/dist/index.css';
+import 'reactjs-popup/dist/index.css'; 
 
 export const Header = () => {
     return (
-        <header className='bg-rose-500'>
+        <header className='bg-rose-500 flex flex-row-reverse'>
             <Popup trigger=
                 {<button> About </button>}
                 modal nested>

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import PlayIcon from "./assets/play.svg";
 import PauseIcon from "./assets/pause.svg";
+import VolIcon from './assets/volume.svg';
 
 const AmbientSoundPlayer = ({ soundPath, label }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -44,7 +45,7 @@ const AmbientSoundPlayer = ({ soundPath, label }) => {
 
   return (
     <div>
-      <div className="flex items-center">
+      <div className="flex items-center font-sub-body font-bold text-lg">
         <h2 className="mr-2">{label}</h2>
         <button onClick={playPause}>
           {isPlaying ? (
@@ -54,6 +55,9 @@ const AmbientSoundPlayer = ({ soundPath, label }) => {
           )}
         </button>
       </div>
+
+      <div className="flex flex-row gap-1 items-center">
+      <img src={VolIcon} alt="Volume Icon" />
       <input
         type="range"
         min="0"
@@ -61,7 +65,11 @@ const AmbientSoundPlayer = ({ soundPath, label }) => {
         step="1"
         value={volume}
         onChange={handleVolumeChange}
+        className="volume-slider"
+        // style={{ width: "300px", height: '4px', background: '#1A120B' }}
       />
+      </div>
+      
     </div>
   );
 };

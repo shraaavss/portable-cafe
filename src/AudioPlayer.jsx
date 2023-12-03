@@ -1,9 +1,28 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import PlayIcon from "./assets/play.svg";
+import PauseIcon from "./assets/pause.svg";
 
 const AmbientSoundPlayer = ({ soundPath, label }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(50); // Initial volume set to 50%
-  const audioRef = useRef(new Audio(soundPath));
+  const audioRef = useRef(new Audio());
+
+  useEffect(() => {
+    const audio = audioRef.current;
+
+    // Set the source when the component mounts or when soundPath changes
+    audio.src = soundPath;
+
+    // Set initial volume and loop property
+    audio.volume = volume / 100;
+    audio.loop = true;
+
+    // Clean up when the component unmounts
+    return () => {
+      audio.pause();
+      audio.src = '';
+    };
+  }, [soundPath, volume]);
 
   const playPause = () => {
     const audio = audioRef.current;
@@ -23,14 +42,18 @@ const AmbientSoundPlayer = ({ soundPath, label }) => {
     audioRef.current.volume = newVolume / 100;
   };
 
-  // Set the loop property to true for continuous playback
-  audioRef.current.loop = true;
-
   return (
     <div>
-      <h2>{label}</h2>
-      <p>{isPlaying ? "Sound is Playing" : "Sound is Paused"}</p>
-      <button onClick={playPause}>Play | Pause</button>
+      <div className="flex items-center">
+        <h2 className="mr-2">{label}</h2>
+        <button onClick={playPause}>
+          {isPlaying ? (
+            <img src={PauseIcon} alt="Pause" />
+          ) : (
+            <img src={PlayIcon} alt="Play" />
+          )}
+        </button>
+      </div>
       <input
         type="range"
         min="0"
@@ -39,7 +62,6 @@ const AmbientSoundPlayer = ({ soundPath, label }) => {
         value={volume}
         onChange={handleVolumeChange}
       />
-      <span>{`Volume: ${volume}%`}</span>
     </div>
   );
 };

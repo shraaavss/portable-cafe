@@ -4,7 +4,7 @@ import 'reactjs-popup/dist/index.css';
 
 export const Header = () => {
     return (
-        <header className='bg-rose-500 flex flex-row-reverse'>
+        <header className='flex flex-row-reverse font-sub-body text-lg p-8'>
             <Popup trigger=
                 {<button> About </button>}
                 modal nested>

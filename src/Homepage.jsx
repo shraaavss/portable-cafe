@@ -14,10 +14,10 @@ import cofpour from './assets/cofeepour.png';
 export default function Homepage() {
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="mainwrap flex flex-col h-screen">
       <Header />
 
-      <div className="mainwrap flex flex-grow p-10 items-center">
+      <div className="flex flex-grow p-10 items-center">
 
         <div className="subwrap flex flex-row w-full justify-around items-center justify-items-center">
 

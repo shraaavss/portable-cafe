@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css'; 
+import './General.css'
 
 export const Header = () => {
     return (
@@ -10,17 +11,18 @@ export const Header = () => {
                 modal nested>
                 {
                     close => (
-                        <div className='modal flex flex-col 
+                        <div className='popup modal flex flex-col 
                         justify-around justify-items-center content-center items-center gap-
-                        font-sub-body text-lg'>
+                        font-sub-body text-lg box-border bg-light-brown p-4 rounded'>
                             <div className='content'>
                                 Can't go to the cafe today? Don't worry! We brought your favourite cafe ambience to your room.
                                 Enjoy and feel free to customize it to your own liking~
                             </div>
                             <div>
-                                <button onClick=
+                                <button className='font-bold'
+                                onClick=
                                     {() => close()}>
-                                    Close modal
+                                    Close
                                 </button>
                             </div>
                         </div>

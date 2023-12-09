@@ -30,3 +30,8 @@
     cursor: pointer;
     -webkit-appearance: none; /* Remove default styling on WebKit browsers */
   }
+
+  .popup-content{
+    border-radius: 5px;
+    /* background: rgb(255, 25, 16); */
+  }

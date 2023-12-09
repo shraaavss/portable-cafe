@@ -15,6 +15,7 @@ export default {
         'regal-blue': '#243c5a',
         'back-creame': '#DFD7BF',
         'title-brown': '#1A120B',
+        'light-brown': '#DFD7BF',
       },
     },
   },

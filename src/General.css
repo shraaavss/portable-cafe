@@ -11,7 +11,6 @@
     background-position: 0 0, 13px 13px;
 }
 
-/* Add these styles to your stylesheet (e.g., General.css) */
 
 .volume-slider {
     width: 300px;
@@ -19,7 +18,7 @@
     border-radius: 2px;
     background: #1A120B;
     outline: none;
-    -webkit-appearance: none; /* Remove default styling on WebKit browsers */
+    -webkit-appearance: none;
   }
   
   .volume-slider::-webkit-slider-thumb {
@@ -28,10 +27,9 @@
     border-radius: 50%;
     background: #1A120B;
     cursor: pointer;
-    -webkit-appearance: none; /* Remove default styling on WebKit browsers */
+    -webkit-appearance: none;
   }
 
   .popup-content{
     border-radius: 5px;
-    /* background: rgb(255, 25, 16); */
   }

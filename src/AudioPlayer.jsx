@@ -66,7 +66,6 @@ const AmbientSoundPlayer = ({ soundPath, label }) => {
         value={volume}
         onChange={handleVolumeChange}
         className="volume-slider"
-        // style={{ width: "300px", height: '4px', background: '#1A120B' }}
       />
       </div>
       
